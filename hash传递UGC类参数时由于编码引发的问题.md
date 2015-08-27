@@ -41,7 +41,7 @@ var name = '帆布鞋';
 var url = 'main/module/crud/~id=' + id + '&name='+ name;
 router.navigate(url, config);
 ```
-这些情况处理逻辑各不相同，有些可以很方便的对参数做encodeURIComponent，有些情况却不容易做，比如第一种通过蒙版生成a标签的方式因此统一出口逻辑很重要，比如在全局router下定义一个静态function nav(){} 用来执行所有通过hash路由导航的功能：
+这些情况处理逻辑各不相同，有些可以很方便的对参数做encodeURIComponent，有些情况却不容易做，比如第一种通过模板生成a标签的方式因此统一出口逻辑很重要，比如在全局router下定义一个静态function nav(){} 用来执行所有通过hash路由导航的功能：
 
 ```javascript
 function nav(url, params, navConfig){
