@@ -43,7 +43,19 @@ router.navigate(url, config);
 ```
 这些情况处理逻辑各不相同，有些可以很方便的对参数做encodeURIComponent，有些情况却不容易做，比如第一种通过蒙版生成a标签的方式因此统一出口逻辑很重要，比如在全局router下定义一个静态function nav(){} 用来执行所有通过hash路由导航的功能：
 
-[pic]
+```javascript
+function nav(url, params, navConfig){
+	var hash = url + '~',
+	    paramsArray = [];
+	for(var e in params){
+		if(params.hasOwnProperty(e)){
+			paramsArray.push(e + '=' + encodeURIComponent(params[e]));
+		}
+	}
+	hash = hash + paramsArray.join('&');
+	this.navigate(hash, navConfig || this.navConfig);	
+}
+```
 
 上述方法对所有的参数统一采用url encode，再放到url的hash里，理论上讲只要通过这种方式来路由，可以避免上文提到的参数解析问题，实际的URL可能是这样：
 http://hao.a.com/init.action#main/page/crud/~id=12&name=%25E6%25B5%258B%25E8%25AF%2595%25E6%258E%25A8%25E5%25B9%25BF%25E8%25AE%25A1%25E5%2588%2592!%2540%2523%2524%2523%2523%2524%255E%2525%2526%2524%2525%2526%2523%2525%255E%2526%2523%2525%255E%2523%2526*%2525
@@ -66,11 +78,11 @@ function parseParam(param){
 ```
 问题看似已经完美的解决了，实际环境中一跑，发现仍然无法正常解析。什么原因呢？通过debug发现，backbone在navigate函数里，对hash做了一些处理，如下图的_extractParameters方法
 
-[图片]
+![_extractParameters](https://github.com/shanggqm/blog/blob/master/asset/image/20150827_paper1_1.png "_extractParameters")
 
 这个方法对自定义hash结构中的参数做了decodeURIComponent的解码操作，如下图所示：
 
-[图片]
+![backbone](https://github.com/shanggqm/blog/blob/master/asset/image/20150827_paper1_2.png "backbone")
 
 所以实际上，在Backbone Router里设置的自定义路由参数：
 
