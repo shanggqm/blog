@@ -22,7 +22,7 @@ UGC类内容的使用场景一般分为两种：
 * 可以通过模板直接生成在a标签上;
 
 ```html
-<a href="#main/module/crud/~id={{id}}&name={{name}}>新建</a>
+<a href="#main/module/crud/~id={{id}}&name={{name}}">新建</a>
 ```
 * 可以通过js动态赋值到href上
 
