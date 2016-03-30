@@ -1,13 +1,6 @@
-title: babel6默认添加use strict引发的问题和解决方案
-date: 2016-03-30
-categories:
-- ES2015
-tags:
-- ES2015 babel usestrict
+# babel6默认添加use strict引发的问题和解决方案
 ---
-*by 郭美青*
 
----
 ## 问题描述
 我们有一个遗留系统，其中所有模块全部按照非strict模式，使用ES5语法书写。现在系统中新增一个全新的模块，我们希望能在这个新模块中引入ES2015语法来书写代码，因此引入了babel编译器来实现ES2015-> ES5的翻译，babel的版本是6.*。
 
