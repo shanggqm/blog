@@ -12,3 +12,7 @@
 深度解析了reselect的源码，并给出了指导实践的思考和结论
 <div style="color:#888888;">阅读时长: 15min</div>
 
+### [译文：Naviecoin建立加密货币教程](https://github.com/shanggqm/navicoin-translate)
+一窥用JS创建一个区块链应用（加密货币）的基本方法
+<div style="color:#888888;">阅读时长: 20min</div>
+
