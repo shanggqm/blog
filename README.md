@@ -1,4 +1,14 @@
 # blog
+### [开发一个高质量的前端组件，这些姿势一定要知道](https://github.com/shanggqm/blog/issues/6)
+<div><img src="https://bizimg.sogoucdn.com/201910/31/15/50/34/koala/tuibian_small.jpg" width="180" align="left">
+  <span>
+    深入介绍和阐述了组件开发思维，以及规范地开发一个前端组件需要关注的方方面面，包括脚手架、质量、可维护性等等，读完可以比较系统地了解开发一个高质量NPM包需要做哪些基本工作
+  </span>
+</div>
+
+```diff
+# 阅读时长: 30min
+```
 
 ### [无意识设计-复盘React Hook的创造过程](https://github.com/shanggqm/blog/issues/4)
 <div><img src="https://camo.githubusercontent.com/8b8bd7de13277ab622d1849f183f7c91d9ce7c54/68747470733a2f2f62697a696d672e736f676f7563646e2e636f6d2f3230313930372f31362f31312f35322f32342f6b6f616c612f576563686174494d47323039322e6a7067" width="180" align="left">
