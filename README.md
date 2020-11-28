@@ -1,5 +1,6 @@
 # blog
 ### [工程化新玩法--云+WebIDE](https://github.com/shanggqm/blog/issues/7)
+前端工程化、WebIDE、云开发
 <div>
   <span>
     在当前时间节点，对云+WebIDE的前端工程解决方案做了一次调研，了解目前该领域的背景、发展现状，大厂实践，以及未来对所有开发者的工作方式将产生什么样的影响，并给出了一个自己思考的结论供参考。
@@ -7,7 +8,7 @@
 </div>
 
 ```diff
-# 阅读时长: 30min
+# 阅读时长: 15min
 ```
 
 ### [开发一个高质量的前端组件，这些姿势一定要知道](https://github.com/shanggqm/blog/issues/6)
